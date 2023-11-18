@@ -89,6 +89,10 @@ export default function LoginForm() {
   }, [isRecordFound]);
 
   useEffect(() => {
+    console.log("okkk");
+  }, []);
+
+  useEffect(() => {
     if (isRecordFound) {
       const Toast = Swal.mixin({
         toast: true,
