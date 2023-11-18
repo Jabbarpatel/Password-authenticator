@@ -1,5 +1,6 @@
 import { dbconnection } from "./dbconnection";
-
+import Cors from "micro-cors";
+const cors = Cors();
 const changepassword = async (req, res) => {
   try {
     const connection = await dbconnection();
@@ -35,4 +36,4 @@ const changepassword = async (req, res) => {
     console.log(err);
   }
 };
-export default changepassword;
+export default cors(changepassword);

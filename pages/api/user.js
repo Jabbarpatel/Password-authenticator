@@ -1,6 +1,8 @@
 import { dbconnection } from "./dbconnection";
 
 const user = async (req, res) => {
+  const result = await req.body;
+  console.log("data", result);
   try {
     const connection = await dbconnection();
     const email = await connection.query(
