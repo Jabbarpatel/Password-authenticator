@@ -2,8 +2,6 @@ import { dbconnection } from "./dbconnection";
 import Cors from "micro-cors";
 const cors = Cors();
 const user = async (req, res) => {
-  const result = await req.body;
-  console.log("data", result);
   try {
     const connection = await dbconnection();
     const email = await connection.query(
